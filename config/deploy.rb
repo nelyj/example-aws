@@ -17,11 +17,10 @@ set :stage,           :production
 
 # Default value for :log_level is :debug
 # set :log_level, :debug
+set :sudo_prompt, "deploy"
 
 # Default value for :pty is false
 set :pty, true
-set :passenger_restart_with_sudo, true
-
 # Default value for :linked_files is []
 set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
 
